@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Check if PYCODE is set
+if [ -z "$PYCODE" ]; then
+    echo "PYCODE is not set."
+    exit 1
+fi
+
+# Run Python code
+python3 -c "$PYCODE"
+
