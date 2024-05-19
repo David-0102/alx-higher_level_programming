@@ -6,7 +6,7 @@ def uppercase(str):
 
     :param str The string to convert to uppercase
     """
-    if not instance(str, str):
+    if not isinstance(str, str):
         raise TypeError("Input must be a string")
 
     for char in str:
