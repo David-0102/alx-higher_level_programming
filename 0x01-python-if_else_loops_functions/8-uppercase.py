@@ -6,8 +6,9 @@ def uppercase(str):
 
     :param str The string to convert to uppercase
     """
+    result = ""
     for c in str:
         if 'a' <= c <= 'z':
             c = chr(ord(c) - ord('a') + ord('A'))
-            print(c, end="")
-            print()
+            result += c
+            print(result)
