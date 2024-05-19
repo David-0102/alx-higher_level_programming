@@ -2,18 +2,11 @@
 
 def uppercase(str):
     """
-    outputs a string in uppercase followed by new line
-
-    :param str The string to convert to uppercase
+    outputs a string in uppercase 
     """
-    if not isinstance(str, str):
-        raise TypeError("Input must be a string")
+    for c in str:
+        if ord(c) >= 97 and ord(c) <=122:
+            c = chr(ord(c) - 32)
+            print ("{}".format(c), end="")
+        print("")
 
-    for char in str:
-        #Convert lowercase xters to uppercase usinf ASCII difference
-        if ord('a') <= ord(char) <=  ord('z'):
-            new_char = chr(ord(char) - 32)
-        else:
-            new_char = char
-        print(new_char, end='') #Print without newline
-    print() #Add the newline after the loop
