@@ -9,6 +9,7 @@ def uppercase(str):
     result = ""
     for c in str:
         if 'a' <= c <= 'z':
-            c = chr(ord(c) - ord('a') + ord('A'))
+            result += chr(ord(c) - ord('a') + ord('A'))
+        else:
             result += c
-            print(result)
+        print(result)
