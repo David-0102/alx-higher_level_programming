@@ -2,7 +2,7 @@
 
 def uppercase(str):
     """
-    Print a string in uppercase followed by new line
+    outputs a string in uppercase followed by new line
 
     :param str The string to convert to uppercase
     """
