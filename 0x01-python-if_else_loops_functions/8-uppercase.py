@@ -6,10 +6,14 @@ def uppercase(str):
 
     :param str The string to convert to uppercase
     """
-    result = ""
-    for c in str:
-        if 'a' <= c <= 'z':
-            result += chr(ord(c) - ord('a') + ord('A'))
+    if not instance(str, str):
+        raise TypeError("Input must be a string")
+
+    for char in str:
+        #Convert lowercase xters to uppercase usinf ASCII difference
+        if ord('a') <= ord(char) <=  ord('z'):
+            new_char = chr(ord(char) - 32)
         else:
-            result += c
-        print(result)
+            new_char = char
+        print(new_char, end='') #Print without newline
+    print() #Add the newline after the loop
